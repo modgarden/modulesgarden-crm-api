@@ -120,12 +120,6 @@ try{
     ));
     dump($response);
 
-    // get followups for requested contact
-    $response = $whmcs->callCRM('contacts/getFollowups', array(
-        'id' => 2, // ID of requested contact (required)
-    ));
-    dump($response);
-
     // Create Follow-up for Contact
     $response = $whmcs->callCRM('contacts/addFollowup', array(
          'id'         => 8,  // Contact ID (contact cant be in Archive)
